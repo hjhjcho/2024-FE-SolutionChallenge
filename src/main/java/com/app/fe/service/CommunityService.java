@@ -16,7 +16,6 @@ public class CommunityService {
         this.communityRepository = communityRepository;
     }
 
-    // 커뮤니티 게시글 조회
     public List<Community> getAllCommunities() {
         return communityRepository.findAll();
     }

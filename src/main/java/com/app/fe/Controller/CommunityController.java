@@ -20,7 +20,6 @@ public class CommunityController {
         this.communityService = communityService;
     }
 
-    // 커뮤니티 게시글 조회
     @GetMapping
     public List<Community> getAllCommunities() {
         return communityService.getAllCommunities();
