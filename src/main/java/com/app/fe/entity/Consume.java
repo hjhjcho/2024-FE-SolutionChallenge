@@ -6,10 +6,11 @@ import lombok.*;
 @Entity
 @Table(name = "TBL_CONSUME")
 @Getter
+@Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Consume {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Long id;
 
@@ -28,7 +29,7 @@ public class Consume {
     @Builder
     public Consume(String productName, String productType, int productOriginalPrice, int productKoreaPrice, Nation nation){
         this.productName=productName;
-        this.productType=productType;
+        //this.productType=productType;
         this.productOriginalPrice=productOriginalPrice;
         this.productKoreaPrice=productKoreaPrice;
         this.nation=nation;
